@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Lotus Career Institute</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --brand: #79D490;
+      --brand-dark: #5fbf78;
+      --telegram: #229ED9;
+      --telegram-dark: #1b7fbf;
+      --dark: #222;
+      --muted: #555;
+      --light: #f9f9f9;
+      --soft: #f2f4f6;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      background: var(--light);
+      color: var(--dark);
+      line-height: 1.6;
+    }
+
+    .container {
+      max-width: 1000px;
+      margin: auto;
+      padding: 20px;
+    }
+
+    /* ---------- HEADER ---------- */
+    header {
+      background: #fff;
+      border-bottom: 4px solid var(--brand);
+    }
+
+    .header-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+      padding: 20px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+
+    .logo {
+      width: 64px;
+      height: 64px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 2px solid var(--brand);
+    }
+
+    .title-group h1 {
+      margin: 0;
+      font-family: 'Lora', serif;
+      font-size: 1.5rem;
+    }
+
+    .title-group p {
+      margin: 4px 0 0;
+      font-style: italic;
+      color: var(--muted);
+      font-size: 0.9rem;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 12px 20px;
+      border-radius: 6px;
+      font-weight: bold;
+      text-decoration: none;
+      transition: background 0.25s ease, transform 0.2s ease;
+    }
+
+    .btn:hover { transform: translateY(-2px); }
+
+    .btn-primary {
+      background: var(--brand);
+      color: #000;
+    }
+
+    .btn-primary:hover {
+      background: var(--brand-dark);
+    }
+
+    .btn-telegram {
+      background: var(--telegram);
+      color: #fff;
+    }
+
+    .btn-telegram:hover {
+      background: var(--telegram-dark);
+    }
+
+    /* ---------- HERO ---------- */
+    .hero {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 36px;
+      align-items: center;
+      margin-top: 50px;
+    }
+
+    .hero-text {
+      flex: 1;
+      min-width: 280px;
+    }
+
+    .rating {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 14px;
+    font-size: 2.3rem;
+    font-weight: bold;
+    color: #F5D627;
+    letter-spacing: 2px;
+    }
+
+
+    .rating span {
+      color: #444;
+      font-size: 0.9rem;
+    }
+
+    .hero-text h2 {
+      font-family: 'Lora', serif;
+      font-size: 2.5rem;
+      margin-bottom: 14px;
+    }
+
+    .hero-text p {
+      font-size: 1.1rem;
+      color: #444;
+    }
+
+    .hero-hindi {
+    margin-top: 8px;
+    font-size: 1rem;
+    color: #555;
+    font-style: italic;
+    }
+
+    .buttons {
+    margin-top: 24px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 14px;
+    }
+
+   .cta-box .buttons {
+    justify-content: center;
+    }
+
+    .book {
+      flex: 1;
+      text-align: center;
+    }
+
+    .book img {
+      width: 300px;
+      max-width: 100%;
+      border-radius: 6px;
+      box-shadow:
+        0 14px 30px rgba(0,0,0,0.18),
+        0 6px 10px rgba(0,0,0,0.12);
+    }
+
+    /* ---------- SECTIONS ---------- */
+    section {
+      background: #fff;
+      padding: 36px 28px;
+      margin-top: 32px;
+      border-radius: 10px;
+      border-left: 6px solid var(--brand);
+    }
+
+    section h3 {
+      font-family: 'Lora', serif;
+      margin-top: 0;
+      font-size: 1.6rem;
+    }
+
+    ul { padding-left: 20px; }
+
+    /* ---------- TESTIMONIALS ---------- */
+    .testimonials {
+      background: var(--soft);
+      border: 4px solid var(--telegram);
+      border-radius: 10px;
+    }
+
+    .testimonial-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 20px;
+      margin-top: 20px;
+    }
+
+    .testimonial {
+      background: #fff;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+      font-size: 0.95rem;
+      font-style: italic;
+    }
+
+    .testimonial span {
+      display: block;
+      margin-top: 10px;
+      font-weight: bold;
+      font-size: 0.85rem;
+      color: #333;
+    }
+
+    /* ---------- CTA BOX ---------- */
+    .cta-box {
+      text-align: center;
+      background: linear-gradient(180deg, #ffffff, #f7faf8);
+    }
+
+    /* ---------- FOOTER ---------- */
+    footer {
+      margin-top: 50px;
+      padding: 40px 20px;
+      background: #fff;
+      border-top: 3px solid var(--brand);
+      text-align: center;
+    }
+
+    .footer-logo {
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 2px solid var(--brand);
+      margin-bottom: 10px;
+    }
+
+    footer h4 {
+      margin: 0;
+      font-family: 'Lora', serif;
+      font-size: 1.4rem;
+    }
+
+    footer p {
+      margin: 8px 0;
+      font-style: italic;
+      color: var(--muted);
+    }
+
+    footer a {
+      margin: 0 10px;
+      text-decoration: none;
+      font-weight: bold;
+      color: #000;
+    }
+
+    @media (max-width: 768px) {
+      .hero { flex-direction: column; text-align: center; }
+      .header-inner { flex-direction: column; }
+    }
+
+   @media (max-width: 768px) {
+   .rating {
+   justify-content: center;
+   }
+}
+  </style>
+</head>
+
+<body>
+
+<header>
+  <div class="container header-inner">
+    <div class="brand">
+      <img src="logo.png" class="logo" alt="LCI Logo">
+      <div class="title-group">
+        <h1>Lotus Career Institute</h1>
+        <p>Diagnosing mistakes. Improving ranks.</p>
+      </div>
+    </div>
+    <a href="https://tally.so/r/Ekl6YX" class="btn btn-primary">Get the Guide</a>
+  </div>
+</header>
+
+<main class="container">
+
+  <div class="hero">
+    <div class="hero-text">
+      <div class="rating">
+        ★★★★★ <span>4.7/5 by aspirants</span>
+      </div>
+
+      <h2>Stop Losing Marks to Avoidable Mistakes</h2>
+      <p>
+      A PYQ-based diagnosis guide for SSC, Banking & Police exams —
+      focused on <em>why</em> answers go wrong.
+      </p>
+
+      <p class="hero-hindi">
+      PYQ पर आधारित गाइड — जो यह दिखाता है कि सवाल गलत क्यों होते हैं,
+      न कि सिर्फ सही कैसे करें।
+      </p>
+
+
+      <div class="buttons">
+        <a href="https://tally.so/r/Ekl6YX" class="btn btn-primary">Get the Guide</a>
+        <a href="https://t.me/lotuscareerinstitute" class="btn btn-telegram">Join Telegram Channel</a>
+      </div>
+    </div>
+
+    <div class="book">
+      <img src="bookcover.png" alt="Book Cover">
+    </div>
+  </div>
+
+  <section>
+    <h3>The Real Problem Aspirants Face</h3>
+    <ul>
+      <li>Concepts are clear, marks are not</li>
+      <li>Same mistakes repeat in every mock</li>
+      <li>No system to identify error patterns</li>
+    </ul>
+  </section>
+
+  <section>
+    <h3>This Is Not Coaching. This Is Diagnosis.</h3>
+    <ul>
+      <li>Built from PYQs</li>
+      <li>Focuses on mistake patterns</li>
+      <li>Designed for rank improvement</li>
+    </ul>
+  </section>
+
+  <section class="testimonials">
+    <h3>What Aspirants Say</h3>
+    <div class="testimonial-grid">
+
+      <div class="testimonial">
+        “I always thought my concepts were weak, so I kept studying more.
+        This guide made me realise the problem was never concepts —
+        it was the same 3–4 mistakes repeating in every mock.
+        Once I became aware of them, my accuracy improved without extra study.”
+        <span>— Amit R., SSC CGL Aspirant</span>
+      </div>
+
+      <div class="testimonial">
+        “What I liked most was that nothing felt generic.
+        Every example felt like something I personally do wrong in exams.
+        It didn’t overwhelm me with rules —
+        it helped me notice my own thinking errors.”
+        <span>— Neha S., Banking Exams</span>
+      </div>
+
+      <div class="testimonial">
+        “कोचिंग पहले भी ली थी, लेकिन यह समझ कभी नहीं आया कि सही उत्तर पता होने के बाद भी नंबर क्यों जाते हैं।
+        यह पहली बार था जब लगा कि कोई मेरे पेपर की गलती पकड़ रहा है, दोबारा पढ़ा नहीं रहा।”
+        <span>— Rahul K., Police Exam Aspirant</span>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="cta-box">
+    <h3>Ready to Fix Your Mistakes?</h3>
+    <p>Start with a guide built to remove repeat errors — not add more theory.</p>
+    <div class="buttons">
+      <a href="https://tally.so/r/Ekl6YX" class="btn btn-primary">Get the Guide</a>
+      <a href="https://t.me/lotuscareerinstitute" class="btn btn-telegram">Subscribe to Lotus Career Institute</a>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <img src="logo.png" alt="LCI Logo" class="footer-logo">
+  <h4>Lotus Career Institute</h4>
+  <p>Diagnosing mistakes. Improving ranks.</p>
+  <div>
+    <a href="https://t.me/lotuscareerinstitute">Telegram</a> |
+    <a href="mailto:ashok68j@gmail.com">Email</a> |
+    <a href="https://www.youtube.com/@LotusCareerInstitute">YouTube</a>
+  </div>
+</footer>
+
+</body>
+</html>
