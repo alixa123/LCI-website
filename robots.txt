@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://lci.org.in/sitemap.xml
