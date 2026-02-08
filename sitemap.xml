@@ -1,7 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
 <url>
 <loc>https://lci.org.in/</loc>
-<priority>1.0</priority>
+<priority>1.00</priority>
 </url>
+
+<url>
+<loc>https://lci.org.in/ssc-coaching.html</loc>
+<priority>0.90</priority>
+</url>
+
+<url>
+<loc>https://lci.org.in/banking-coaching.html</loc>
+<priority>0.90</priority>
+</url>
+
+<url>
+<loc>https://lci.org.in/pyq-analysis.html</loc>
+<priority>0.85</priority>
+</url>
+
+<url>
+<loc>https://lci.org.in/government-exam-preparation.html</loc>
+<priority>0.85</priority>
+</url>
+
 </urlset>
